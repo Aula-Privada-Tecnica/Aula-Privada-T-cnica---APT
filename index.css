@@ -972,6 +972,10 @@ body {
     margin-bottom: 25px;
 }
 
+.contenido-anuncio strong {
+  font-size: 2vh;
+}
+
 /* Estilos del Botón de Cierre */
 .boton-anuncio {
     background-color: #051020; /* Color de fondo del botón: #051020 */
