@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "nombre": "Club de Principiantes",
+    "categoria": "Nivel Básico",
+    "region": "Global",
+    "enlace": "https://cuartel.org/principiantes"
+  },
+  {
+    "id": 2,
+    "nombre": "Club de Intermedios",
+    "categoria": "Nivel Medio",
+    "region": "Global",
+    "enlace": "https://cuartel.org/intermedios"
+  },
+  {
+    "id": 3,
+    "nombre": "Club de Avanzados",
+    "categoria": "Nivel Avanzado",
+    "region": "Global",
+    "enlace": "https://cuartel.org/avanzados"
+  },
+  {
+    "id": 4,
+    "nombre": "Ingresar a Mi Club",
+    "categoria": "Acceso Privado",
+    "region": "Personalizado",
+    "requierePIN": true
+  },
+  {
+    "id": 5,
+    "nombre": "Solicitar Boletas de Pago",
+    "categoria": "Acceso Privado",
+    "region": "Personalizado",
+    "requierePIN": true
+  }
+]
