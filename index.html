@@ -402,7 +402,7 @@
 <div id="clubModal" class="modal-base oculto">
   <div class="contenido-modal fondo-club animacion-modal">
     <img src="logoretro.png" alt="Logo Club" class="imagen-club">
-    <h2>Acceder a mi CLUB</h2>
+    <h2>Acceder a mi Aula</h2>
     <p>Ingresa tu PIN de acceso:</p>
     <input type="text" id="pinClub" maxlength="12" pattern="\\d{12}" inputmode="numeric" required placeholder="" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
     <div class="botones-club">
@@ -531,7 +531,7 @@
 
 <div id="footerModal1" class="modal oculto">
   <div class="modal-contenido fondo-footer1">
-    <h2><img src="logoretro2.png" alt="Logo 1">Quiénes Somos</h2>
+    <h2><img src="logoretro2.png" alt="Logo 1">Nosotros</h2>
     <p>
       <STRONG>APT | Aula Privada Técnica</STRONG> no es solo una plataforma; es un proyecto educativo fundado por el <STRONG>Téc. Angel Manuel Guevara Chavarría</STRONG> para democratizar la formación técnica de calidad.<br><br>
       
@@ -589,10 +589,25 @@
 </div>
 
 <footer class="footer-legal">
-  <p>&trade; Téc. Angel Manuel Guevara Chavarría</p>
-  <p>2025 - 2026 APT | Aula Privada Técnica.<br>&copy; Todos los derechos reservados.</p>
-  <p>Este sitio ha sido desarrollado con fines educativos y espirituales. Queda prohibida la reproducción total o parcial sin autorización institucional.</p>
+    <p>&trade; Téc. Angel Manuel Guevara Chavarría</p>
+    <p><STRONG>2025 - 2026 APT | Aula Privada Técnica.</STRONG><br>&copy; Todos los derechos reservados.</p>
+    <p class="advertencia-legal" style="font-size: 1vh; line-height: 1.5vh;">
+        <STRONG>ADVERTENCIA LEGAL:</STRONG> Este sitio y su contenido (estructura, diseño, código, textos y metodología) están protegidos por las leyes de Propiedad Intelectual e Industrial.<br>
+        <STRONG>Queda estrictamente prohibida</STRONG> la copia, reproducción, distribución, imitación total o parcial, o cualquier apropiación indebida de este material.<br>
+        Cualquier intento de violación a estos derechos será perseguido con el máximo rigor de la ley. Nos reservamos el derecho de iniciar <STRONG>acciones legales inmediatas</STRONG> contra los infractores.
+    </p>
 </footer>
+
+<div id="anuncioModal" class="modal-anuncio">
+    <div class="contenido-anuncio">
+        <h2><STRONG>APT<br><p  style="border-bottom: 1px solid #007bff; text-transform: uppercase; font-size: 2vh;">Aula Privada Técnica</p><br><br>anuncia a sus visitantes</STRONG></h2>
+        <p>
+            Nuestras clases para cada una de las aulas y todo su contenido estará disponible el <STRONG>Lunes 02 de febrero del 2026</STRONG>.<br><br>
+            Mientras, puedes dar un recorrido a nuestras aulas.
+        </p>
+        <button id="cerrarAnuncio" class="boton-anuncio">Entendido</button>
+    </div>
+</div>
 
 </body>
 </html>
