@@ -404,23 +404,36 @@ body {
   display: flex;
   justify-content: center;
   gap: 1vh;
-  background-color: #051020;
+  background-color: white;
   padding: 1vh;
 }
 
 .pie button {
-  background-color: #051020;
-  color: white;
-  border: 1px solid #007bff;
+  background-color: white;
+  color: #051020;
+  font-weight: bold;
+  border-bottom: 1px solid #007bff;
+  border-top: none;
+  border-right: none;
+  border-left: none;
   padding: 1vh;
-  border-radius: 6px;
+  border-radius: 1vh;
+  width: 100%;
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .pie button:hover {
-  background-color: #051020;
+  background-color: white;
+  transform: translateY(-7px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.pie button:active {
+  transform: translateY(-2px); /* Un poco más abajo que en hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra de vuelta a la normal */
 }
 
 .modal-contenido {
@@ -619,10 +632,11 @@ body {
 
 
 .bloques-alternados {
-  display: flex;
+  display: grid;
   flex-direction: column;
-  gap: 2vh;
+  gap: 3vh;
   padding: 2vh;
+  text-align: center;
   width: 88%;
   border-radius: 1vh;
   margin: auto;
@@ -640,12 +654,13 @@ body {
   padding: 1vh;
   background-color: #051020;
   transition: all 0.3s ease;
+  border: 1px solid goldenrod;
 }
 
 .bloque:hover {
   transform: translateY(-7px);
   box-shadow: 0 12px 25px white;
-  border: 1px solid #007bff;
+  border: 1px solid #ffffff;
 }
 
 .bloque:active {
@@ -657,17 +672,20 @@ body {
 .info {
   width: 45%;
   margin: 0;
-  font-size: 1.2vh;
+  font-size: 2vh;
   line-height: 1.6;
+  text-align: center;
+  margin: auto;
 }
 
 .izquierda {
   text-align: left;
-  font-size: 1.5vh;
+  font-size: 1vh;
 }
 
 .derecha {
   text-align: right;
+  font-size: 1vh;
 }
 
 .barra-social {
@@ -679,7 +697,7 @@ body {
 
 .iconos-sociales {
   display: flex;
-  gap: 4vh;
+  gap: 3vh;
   align-items: center;
   background-color: none;
 }
