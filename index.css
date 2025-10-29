@@ -789,27 +789,82 @@ body {
 }
 
 .boton-club {
-  background-color: #051020;
-  color: white;
+  background-color: white;
+  color: #051020;
   border: none;
-  padding: 2vh 4vh;
-  border-radius: 8px;
-  font-size: 2.5vh;
+  padding: 1vh;
+  border-radius: 1vh;
+  font-size: 1.5vh;
   font-weight: bold;
   cursor: pointer;
+  margin-top: -3vh;
   transition: background-color 0.2s ease, transform 0.2s ease;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 .boton-club:hover {
-  background-color: #0a1a30;
+  background-color: white;
+  box-shadow: 0 12px 25px #051020;
   transform: scale(1.05);
 }
 
+.boton-club:active {
+  transform: translateY(-2px); /* Un poco más abajo que en hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra de vuelta a la normal */
+}
+
+.botones-club {
+  display: grid;
+  margin: auto;
+  gap: 1vh;
+}
+
+.botones-club button {
+  background-color: #051020;
+  color: white;
+  font-weight: bold;
+  border-radius: 1vh;
+  padding: 1vh;
+  width: 50%;
+  margin: auto;
+}
+
+.botones-club button:hover {
+  background-color: white;
+  color: #051020;
+  font-weight: bold;
+}
+
+.modal-base input {
+  background-color: white;
+  border: 1px solid #007bff;
+  padding: 1vh;
+  width: 90%;
+  margin: auto;
+  border-radius: 1vh;
+  margin-bottom: 1vh
+}
+
+.modal-base p {
+  margin: auto;
+  margin-bottom: 0.5vh;
+  font-size: 1.5vh;
+  text-align: left; 
+}
+
 .imagen-club2 {
-  width: 40px;
+  width: 20px;
+  height: 20px;
   margin-right: 10px;
   vertical-align: middle;
+}
+
+.imagen-club {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  padding: 0;
+  display: flex;
 }
 
 .modal-base {
@@ -825,6 +880,8 @@ body {
 
 .contenido-modal {
   background: white;
+  color: #051020;
+  border: 1px solid #007bff;
   padding: 20px;
   border-radius: 10px;
   max-width: 90%;
