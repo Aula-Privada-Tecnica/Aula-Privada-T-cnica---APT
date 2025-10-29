@@ -81,30 +81,54 @@ function validarFormulario() {
 
 // 🧠 Validación de PIN del CLUB
 function validarPin() {
-  const pin = document.getElementById("pinClub").value.trim();
-  const resultado = document.getElementById("resultadoClub");
+    const pinInput = document.getElementById('pinClub');
+    const resultado = document.getElementById('resultadoClub');
+    const pin = pinInput.value.trim(); 
+    
+    // Función para aplicar estilos base (solo color y padding)
+    const aplicarEstilosBase = (color) => {
+        resultado.style.color = color; // Color de texto solicitado o de éxito/error
+        resultado.style.padding = '1vh'; // PADDING solicitado
+        // *Quitamos cualquier otro estilo de fondo o borde que no fue solicitado*
+        resultado.style.backgroundColor = 'transparent'; 
+        resultado.style.border = 'none';
+        resultado.style.borderRadius = '0';
+    };
 
-  if (pin.length !== 12) {
-    resultado.innerText = "❌ El PIN debe tener exactamente 12 dígitos.";
-    return;
-  }
+    // 1. VALIDACIÓN DE LONGITUD DEL PIN (APLICACIÓN DE ESTILOS EXACTOS SOLICITADOS)
+    if (pin.length !== 12) {
+        resultado.innerText = "❌ El PIN debe tener exactamente 12 dígitos.";
+        
+        // Estilos EXCLUSIVOS solicitados:
+        aplicarEstilosBase('#051020'); // Color de texto #051020 y padding 1vh
+        return;
+    }
 
-  if (estudiantesClub.hasOwnProperty(pin)) {
-    const estudiante = estudiantesClub[pin];
-    resultado.innerText = `✅ Bienvenido ${estudiante.nombre} ${estudiante.apellido}. Acceso concedido al área de estudiantes.`;
-  } else {
-    resultado.innerText = "❌ PIN incorrecto. Acceso denegado.";
-  }
+    // 2. VALIDACIÓN CONTRA LA BASE DE DATOS SIMULADA
+    if (estudiantesClub.hasOwnProperty(pin)) {
+        // Estilos para el mensaje de ÉXITO
+        const estudiante = estudiantesClub[pin];
+        resultado.innerText = `✅ ¡Bienvenido ${estudiante.nombre} ${estudiante.apellido}! Acceso concedido al Club.`;
+        aplicarEstilosBase('green'); // Color verde para éxito
+        
+        // Aquí puedes agregar la redirección:
+        // window.location.href = "club.html"; 
+
+    } else {
+        // Estilos para el mensaje de PIN INCORRECTO
+        resultado.innerText = "❌ PIN incorrecto. Acceso denegado. Inténtalo de nuevo.";
+        aplicarEstilosBase('red'); // Color rojo para error
+    }
 }
 
-// 🗂 Base de datos simulada
+// 🗂 Base de datos simulada (mantengo la tuya)
 const estudiantesClub = {
-  "123456789012": { nombre: "Juan", apellido: "Pérez" },
-  "987654321098": { nombre: "María", apellido: "González" },
-  "456789123456": { nombre: "Luis", apellido: "Ramírez" },
+    "24263242631": { nombre: "ZXC", apellido: "VBN" },
+    "13215": { nombre: "QWE", apellido: "RTY" },
+    "1104": { nombre: "ASD", apellido: "FGH" },
 };
 
-// 🎯 Mostrar botón CLUB manualmente
+// 🎯 Mostrar botón CLUB manualmente (mantengo la tuya)
 function mostrarBotonClub() {
-  document.getElementById("seccionClubes").classList.remove("oculto");
+    document.getElementById("seccionClubes").classList.remove("oculto");
 }
