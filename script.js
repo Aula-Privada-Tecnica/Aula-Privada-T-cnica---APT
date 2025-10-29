@@ -132,3 +132,27 @@ const estudiantesClub = {
 function mostrarBotonClub() {
     document.getElementById("seccionClubes").classList.remove("oculto");
 }
+
+// Deshabilita el menú contextual (clic derecho) en toda la página
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+// Bloquea atajos de teclado comunes (Copiar, Pegar, Inspeccionar)
+document.addEventListener('keydown', function(e) {
+  // Bloquear F12
+  if (e.key === 'F12') {
+    e.preventDefault();
+  }
+  
+  // Bloquear Ctrl+Shift+I (Inspeccionar) o Ctrl+C (Copiar) o Ctrl+U (Ver Fuente)
+  if ((e.ctrlKey || e.metaKey) && (e.shiftKey && e.key === 'I')) {
+    e.preventDefault();
+  }
+  if ((e.ctrlKey || e.metaKey) && e.key === 'c') {
+    e.preventDefault();
+  }
+  if ((e.ctrlKey || e.metaKey) && e.key === 'u') {
+    e.preventDefault();
+  }
+});
