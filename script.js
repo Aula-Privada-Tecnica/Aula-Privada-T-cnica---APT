@@ -156,3 +156,23 @@ document.addEventListener('keydown', function(e) {
     e.preventDefault();
   }
 });
+
+// 📢 Función para mostrar el anuncio al cargar
+document.addEventListener('DOMContentLoaded', function() {
+    const anuncio = document.getElementById('anuncioModal');
+    const botonCerrar = document.getElementById('cerrarAnuncio');
+    
+    // Muestra el modal de anuncio
+    if (anuncio) {
+        anuncio.style.display = 'flex';
+    }
+
+    // Oculta el modal al hacer clic en el botón
+    if (botonCerrar) {
+        botonCerrar.addEventListener('click', function() {
+            if (anuncio) {
+                anuncio.style.display = 'none';
+            }
+        });
+    }
+});
