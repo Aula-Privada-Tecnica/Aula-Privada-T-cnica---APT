@@ -28,7 +28,7 @@ body {
 
 .titulo-contenedor {
   display: flex;
-  gap: 19vh;
+  gap: 12vh;
   align-items: center;
 }
 
