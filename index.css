@@ -3,6 +3,10 @@ body {
   margin: 0;
   font-family: tahoma;
   background-color: white;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge */
+  user-select: none;
 }
 
 .encabezado {
@@ -24,7 +28,7 @@ body {
 
 .titulo-contenedor {
   display: flex;
-  gap: 14vh;
+  gap: 19vh;
   align-items: center;
 }
 
