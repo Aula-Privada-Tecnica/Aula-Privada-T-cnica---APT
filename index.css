@@ -510,26 +510,36 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5vh 0;
+  padding: 0;
+  margin-top: -3vh;
+  margin-bottom: 2vh;
 }
 
 /* Botón institucional */
 .boton-formulario {
-  background-color: #051020;
-  color: white;
+  background-color: white;
+  color: #051020;
   border: none;
   padding: 1vh;
   border-radius: 8px;
-  font-size: 1vh;
+  font-size: 1.5vh;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.2s ease;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.boton-formulario:active {
+  transform: translateY(-2px); /* Un poco más abajo que en hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra de vuelta a la normal */
 }
 
 .boton-formulario:hover {
-  background-color: #051020;
+  background-color: white;
   transform: scale(1.03);
+  box-shadow: 0 12px 25px #051020;
+  transform: translateY(-7px);
 }
 
 /* Ocultar por defecto */
